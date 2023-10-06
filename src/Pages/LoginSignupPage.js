@@ -10,13 +10,14 @@ const LoginSignupPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
 
     try {
       if (isLogin) {
         // Perform login logic
-        const response = await axios.post('http://localhost:5000/auth/signin', {
-          email,
-          password,
+        const response = await axios.post('https://resetpasswordbe-yrgz.onrender.com/auth/signin', {
+          email: email,
+          password: password,
         });
         const responseData = response.data;
 
@@ -28,7 +29,7 @@ const LoginSignupPage = () => {
         }
       } else {
         // Perform signup logic
-        const response = await axios.post('http://localhost:5000/auth/signup', {
+        const response = await axios.post('https://resetpasswordbe-yrgz.onrender.com/auth/signup', {
           email,
           password,
         });

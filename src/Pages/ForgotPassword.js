@@ -9,7 +9,7 @@ function ForgotPassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:5000/auth/forgot-password', { email })
+      .post('https://resetpasswordbe-yrgz.onrender.com/auth/forgot-password', { email })
       .then((res) => {
         if (res.data.status === 'Password reset link sent successfully') {
           navigate('/reset-password');

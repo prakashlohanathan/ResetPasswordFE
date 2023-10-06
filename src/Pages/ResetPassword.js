@@ -12,7 +12,7 @@ function ResetPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post(`http://localhost:5000/auth/reset-password?id=${state.get("id")}&token=${state.get("token")}`, {
+    const response = await axios.post(`https://resetpasswordbe-yrgz.onrender.com/auth/reset-password?id=${state.get("id")}&token=${state.get("token")}`, {
       password,
     });
 
